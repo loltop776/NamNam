@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+img{width: 100%;}
+
+
+
+/* Móvil */
+
+
 .container_mobile{
 
     width: 300px;
@@ -93,9 +100,9 @@
 
 .screen{
 
-    width: 280px;
+    width: 278px;
     height: 450px;
-    background-color: white;
+    background-image: url(../img/back_phone.png);
     border-radius: 5px;
     margin: 0 auto;
 
@@ -117,5 +124,178 @@
     height: 25px;
     border: 2px solid rgb(151,151,151);
     border-radius: 40px;
+
+}
+
+
+
+
+
+/* Botón Mensaje */
+
+.screen_message{
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    /* border: 1px solid black; */
+    /* margin-top: 60%; */
+}
+
+
+.screen_message_boss{
+
+    width: 90%;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    background-color: azure;
+    border: 1px solid black;
+    align-items: center;
+    border-radius: 5px;
+    height: auto;
+    margin-left: 5%;
+    margin-top:45%;
+    visibility: hidden;
+
+}
+
+.screen_message:hover > .screen_message_boss{
+
+    visibility:visible;
+
+}
+
+.screen_message_boss > p{
+
+    margin: 3%;
+
+}
+
+.screen_message_button{
+
+    position: relative;
+    width: 80%;
+    display: flex;
+    /* margin-top: 60%; */
+    top: 100px;
+    margin-left: 10%;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.537);
+    border: 1px solid rgba(0, 0, 0, 0.132);
+    text-decoration: none;
+    color: black;
+
+}
+
+.screen_message_button > img{
+
+    width: 30%;
+
+}
+
+.screen_message_button:hover{
+
+    background-color: white;
+
+}
+
+
+
+
+
+/* Primer apartado de Wasp */
+
+.screen_wasp{
+
+    width: 278px;
+    height: 450px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 0 auto;
+
+}
+
+.top_wasp{
+
+    width: 100%;
+    display: flex;
+    height: 50px;
+    border-bottom: 1px solid black;
+    align-items: center;
+
+}
+
+.top_wasp > img{
+
+    width: 12%;
+    margin-left: 2%;
+    border-radius:40px;
+    /* border: 2px solid black; */
+
+}
+
+.top_wasp > p{
+
+    font-size: 15px;
+    width: 70%;
+    /* text-align: center; */
+    padding-left: 2%;
+
+}
+
+.mid_wasp{
+
+    width: 100%;
+    height: 360px;
+    background-color: rgba(127, 255, 212, 0.598);
+
+
+}
+
+.mid_wasp > article{
+
+    width: 80%;
+    border: 2px solid black;
+    height: auto;
+    margin-left: 1%;
+    text-align: justify;
+    background-color: aliceblue;
+    border-radius: 5px;
+    margin-top: 3%;
+
+}
+
+article > p{
+
+    margin: 2%;
+    font-size: 15px;
+
+}
+
+.bottom_wasp {display: flex; width: 100%;}
+
+.bottom_wasp > img{width: 10%; margin: 1%;}
+
+.bottom_wasp > form{width: 90%; padding: 1%; display: flex;}
+
+.bottom_wasp > form > #name{
+
+    width: 81%;
+    border-top: 1px solid black;
+    height: 30px;
+
+}
+
+.bottom_wasp > form > #submit{
+
+    margin-left: 2%;
+    width: 17%;
+    border-top: 1px solid black;
+    height: 30px;
 
 }

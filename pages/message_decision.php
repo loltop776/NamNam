@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
     <link rel="stylesheet" href="../stylesheets/stylesheet_index.css">
     
 </head>
@@ -17,8 +25,7 @@
             <span class="audio_up"></span>
         </div>
         <div class="screen_wasp">
-
-            <section class="top_wasp">
+        <section class="top_wasp">
                 <!-- Logo jefe -->
                 <img src="../img/boss_icon.png" alt="No se ha podido cargar la imagen"> 
 
@@ -29,17 +36,7 @@
             </section>
             <section class="mid_wasp">
                 <br>
-                <article><p>Buenas, he visto tu currículum y he decidido contactar con usted mediante Whatsapp.</p></article>
-                
-                <article><p>Me llamo Rodriguez y sería ideal para nuestra empresa un especialista como tú.</p></article>
-
-                <article><p>¿Cómo le gustaría que le llame?</p></article>
-
-                <p><?php if(isset($_GET['error']) && $_GET['error'] = 1){
-
-                    echo "Nombre de usuario fallido, pruebe de nuevo";
-
-                } ?></p>
+                <article class="message_user"><p>Buenas, me llamo </p></article>
                 
 
             </section>
@@ -48,10 +45,9 @@
                 
                 <img src="../img/face.svg" alt="No se ha podido cargar la imagen">
 
-                <form action="../validation/validation_message_name.php" method="post">
+                <form action="../validation/#.php" method="post">
 
-                    <input type="text" id="name" name="nombre" placeholder="Introduce texto aquí...">
-                    <input type="submit" name="enviar" id="submit">
+                    
 
                 </form>
 
@@ -63,5 +59,7 @@
         </div>
     </section>
 
+</body>
+</html>
 </body>
 </html>

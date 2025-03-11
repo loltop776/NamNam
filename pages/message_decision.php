@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-<body>
+<?php 
+
+session_start();
+
+    if(!($_SESSION['name_correcto'] == 'check')){
+
+        header('Location: ../index.php');
+
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +41,44 @@
             </section>
             <section class="mid_wasp">
                 <br>
-                <article class="message_user"><p>Buenas, me llamo </p></article>
+                <article class="message_user"><p>Buenas, me llamo <b><?php echo $_SESSION['name']; ?></b>. </p></article>
+                
+                <article class="message_boss"><p>Perfecto <b><?php echo $_SESSION['name']; ?></b>, nos encantaría contar con usted sobre la resolución de problemas que tenemos actualmente en nuestra empresa.</p></article>
+
+                <article class="message_boss"><p>¿Qué me dices?</p></article>
+
+                <p style="position: absolute;"><?php if(isset($_GET['error']) && $_GET['error'] = 1){
+
+                    echo "Introduce un valor válido.";
+
+                } ?></p>
+
+                <table>
+
+                    <tr>
+
+                        <td class="red">
+                            <p>Me la pela</p>
+                        </td>
+                        <td class="green">
+                            <p>Me parece bien</p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="green">
+                            <p>Dale</p>
+                        </td>
+                        <td class="red">
+                            <p>Tu flipas</p>
+                        </td>
+
+                    </tr>
+
+                </table>
+
                 
 
             </section>
@@ -45,9 +87,10 @@
                 
                 <img src="../img/face.svg" alt="No se ha podido cargar la imagen">
 
-                <form action="../validation/#.php" method="post">
+                <form action="../validation/validation_decision.php" method="post">
 
-                    
+                    <input type="text" id="name" name="decision" placeholder="Introduce texto aquí...">
+                    <input type="submit" name="enviar" id="submit">
 
                 </form>
 

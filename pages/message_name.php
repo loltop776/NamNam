@@ -29,11 +29,11 @@
             </section>
             <section class="mid_wasp">
                 <br>
-                <article><p>Buenas, he visto tu currículum y he decidido contactar con usted mediante Whatsapp.</p></article>
+                <article class="message_boss"><p>Buenas, he visto tu currículum y he decidido contactar con usted mediante Whatsapp.</p></article>
                 
-                <article><p>Me llamo Rodriguez y sería ideal para nuestra empresa un especialista como tú.</p></article>
+                <article class="message_boss"><p>Me llamo Rodriguez y sería ideal para nuestra empresa un especialista como tú.</p></article>
 
-                <article><p>¿Cómo le gustaría que le llame?</p></article>
+                <article class="message_boss"><p>¿Cómo le gustaría que le llame?</p></article>
 
                 <p><?php if(isset($_GET['error']) && $_GET['error'] = 1){
 

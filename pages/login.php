@@ -16,8 +16,9 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Login</title>
     <link rel="stylesheet" href="../stylesheets/stylesheet_login.css">
+    <link rel="icon" href="../img/NamNam_icon.ico">
 </head>
 <body>
 
@@ -25,6 +26,7 @@ session_start();
     <!-- Contenido de la web -->
 
     <header>
+        <img id="header_image" src="../img/NamNam_icon.ico" alt="">
         <h1>NamNam</h1>
     </header>
 
@@ -32,29 +34,37 @@ session_start();
     <section class="block_form">
 
         <span></span>
-        <form class="login_form" action="">
+        <form  class="login_form" action="../validation/validation_login.php" method="post">
+            <?php if(isset($_GET['error']) && $_GET['error'] = 1){
+
+                echo "<br>";
+                echo "Valores incorrectos";
+
+            } ?>
 
             <article>
-                <label for="">Usuario:</label>
-                <input type="text" id="user" name="user">
+                <label for="user">Usuario:</label>
+                <input type="text" id="user" name="user" placeholder="Escriba aquí" required>
             </article>
 
             <article>
-                <label for="">Contraseña:</label>
-                <input type="password" id="passwd" name="passwd">
+                <label for="passwd">Contraseña:</label>
+                <input type="password" id="passwd" name="passwd" placeholder="Escriba aquí" required>
             </article>
 
             <article>
 
-                <label for="">Categoría:</label>
-                <select>
-                    <option value="0" disabled>- Seleccione una opción -</option>
-                    <option value="1">Departamento IT</option>
+                <label for="cat">Categoría:</label>
+                <select id="cat" name="cat">
+                    <option value="" disabled>- Seleccione una opción -</option>
+                    <option value="2">Finanzas</option>
                     <option value="2">Administrador</option>
-                    <option value="3">Finanzas</option>
+                    <option value="1">Departamento IT</option>
                 </select>
 
             </article>
+
+            <input type="submit" id="submit" name="submit">
 
         </form>
 
@@ -63,6 +73,15 @@ session_start();
     </section>
 
 
+    <!-- Botón para el móvil -->
+
+    <!-- <section class="content_button_movile">
+    <section class="button_movile">
+
+        <img src="../img/movile_icon.png" alt="No se ha podido cargar la imagen">
+
+    </section>
+    </section> -->
 
     <!-- Parte del MÓVIL -->
 
@@ -84,7 +103,9 @@ session_start();
             </section>
             <section class="mid_wasp">
 
+            <article class="message_boss"><p>Perfecto, primero necesito que inicies sesión mediante los siguientes parámetros.</p></article>
 
+            <article class="message_boss"><p>Usuario: itAdmin <br> Passwd: 45579 <br> Categoría: Departamento IT</p></article>
 
             </section>
             <hr>

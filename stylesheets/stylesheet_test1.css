@@ -245,6 +245,184 @@
 }
 
 
+.container_book{
+
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 1800px;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.259);
+
+}
+
+.inside_book{
+
+    position: relative;
+    width: 50%;
+    height: 1500px;
+    margin: 15%;
+
+
+}
+
+.inside_book > img{
+
+    position: fixed;
+    top: 18%;
+    left: 20%;
+    width: 55%;
+    height: 500px;
+
+}
+
+.close_book{
+
+    position: fixed;
+    width: 35%;
+    height: 40px;
+    background-color: red;
+    color: aliceblue;
+    font-size: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
+    bottom: 27%;
+    left: 30%;
+
+}
+
+.close_book:hover{
+
+    background-color: rgb(193, 1, 1);
+
+}
+
+
+/* Algoritmos */
+
+.first_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 27%;
+    top: 25%;
+
+}
+
+.second_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 37%;
+    top: 25%;
+
+}
+
+.third_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 27%;
+    top: 40%;
+
+}
+
+.fourth_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 37%;
+    top: 40%;
+
+}
+
+.fifth_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 27%;
+    top: 55%;
+
+}
+
+.sixth_alg{
+
+    width: 25%;
+    position: fixed;
+    left: 37%;
+    top: 55%;
+
+}
+
+
+
+
+
+
+/* Suma de algoritmos */
+
+.first_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 30%;
+    font-size: 26px;
+
+}
+
+.second_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 35%;
+    font-size: 26px;
+
+}
+
+.third_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 40%;
+    font-size: 26px;
+
+}
+
+.fourth_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 45%;
+    font-size: 26px;
+
+}
+
+.fifth_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 50%;
+    font-size: 26px;
+
+}
+
+.sixth_problem{
+
+    width: 25%;
+    position: fixed;
+    right: 26%;
+    top: 55%;
+    font-size: 26px;
+
+}
+
+
 
 
 
@@ -252,10 +430,49 @@
 
 /* Móvil */
 
+.mobile_button{
+
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 6%;
+    bottom: 4%;
+    background-color: yellowgreen;
+    border-radius: 50%;
+
+}
+
+.mobile_button:hover > button:hover{
+
+    background-color: green;
+
+
+}
+
+.mobile_button > button{
+
+    width: 100px;
+    text-align: center;
+    height: 100px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    border: 0px;    
+    position: absolute;
+    border-bottom: 2px solid grey;
+    border-right: 2px solid grey;
+
+}
+
+.mobile_button > button > img{
+
+    width: 70%;
+    text-align: center;
+
+}
 
 .container_mobile{
 
-    /* visibility:hidden; */
+    visibility:hidden;
     width: 220px;
     height: 420px;
     border-radius: 40px;
@@ -375,7 +592,7 @@
 
 /* Primer apartado de Wasp */
 
-.screen_wasp{
+.screen_wasp, .second_screen_wasp{
 
     width: 90%;
     height: 300px;
@@ -385,6 +602,7 @@
     transition: ease 1s all;
 
 }
+
 
 
 .top_wasp{
@@ -474,5 +692,202 @@ article > p{
     width: 21%;
     border-top: 1px solid black;
     height: 30px;
+
+}
+
+
+@media (max-width: 700px){
+
+    .products_row > article > div{
+
+        padding: 1%;
+        font-size: 12px;
+    
+    }
+
+    .products_row > article{
+
+        margin: 2%;
+        height: 250px;
+    
+    }
+
+        
+    .image_product{
+
+        width: 100%;
+        height: 130px;
+        border-radius: 10px;
+
+    }
+
+    .book{
+
+        left: 20%;
+        bottom: 7%;
+    
+    }
+
+    .second_mobile_button{
+
+        left: 4%;
+        bottom: 7%;
+    
+    }
+
+    .mobile_button{
+
+        right: 6%;
+        bottom: 7%;
+    
+    }
+
+    
+    .second_container_mobile{
+
+        width: 300px;
+        height: 350px;
+        left: 2%;
+        bottom: 7%;
+        position: fixed;
+
+    }
+
+    .second_mid_wasp{
+
+        width: 100%;
+        height: 200px;
+    
+    }
+
+    .second_screen_wasp{
+
+        height: 232px;
+    
+    }
+
+    .container_mobile{
+        bottom: 7%;
+    
+    }
+
+    .inside_book{
+
+        width: 50%;
+        height: 1300px;
+        margin: 5%;
+    
+    
+    }
+    
+    .inside_book > img{
+    
+        position: fixed;
+        top: 18%;
+        left: 10%;
+        width: 80%;
+        height: 500px;
+    
+    }
+
+    .close_book{
+
+        bottom: 25%;
+        left: 32%;
+    
+    }
+    
+
+    .first_alg{
+
+        left: 20%;
+    
+    }
+    
+    .second_alg{
+
+        left: 35%;
+    
+    }
+    
+    .third_alg{
+    
+        left: 20%;
+    
+    }
+    
+    .fourth_alg{
+
+        left: 35%;
+    
+    }
+    
+    .fifth_alg{
+
+        left: 20%;
+    
+    }
+    
+    .sixth_alg{
+    
+        left: 35%;
+    
+    }
+    
+    
+    
+    
+    
+    /* Suma de algoritmos */
+    
+    .first_problem{
+    
+        width: 45%;
+        right: 4%;
+        font-size: 18px;
+    
+    }
+    
+    .second_problem{
+    
+        width: 45%;
+        right: 4%;
+        font-size: 18px;
+    
+    }
+    
+    .third_problem{
+    
+        width: 45%;
+        right: 4%;
+        font-size: 18px;
+    
+    }
+    
+    .fourth_problem{
+    
+        width: 45%;
+        right: 4%;
+        font-size: 18px;
+    
+    }
+    
+    .fifth_problem{
+    
+        width: 45%;
+        right: 4%;
+        font-size: 18px;
+    
+    }
+    
+    .sixth_problem{
+    
+        width: 45%;
+        right:4%;
+        font-size: 18px;
+    
+    }
+    
+    
 
 }

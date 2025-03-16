@@ -1,3 +1,15 @@
+<?php 
+
+session_start();
+
+    if(!($_SESSION['login'] = 'checked')){
+
+        header('Location: ../../index.php');
+
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -122,7 +134,7 @@
                 <!-- Texto -->
                 <div>
                     <h2>I..ap-2</h2>
-                    <p>2n3hr89h2 39hhngi 39u newnjfnw if29 hf49u3nf uiwenf 932h f84ugbn</p>
+                    <p>2n3hr89h2 39hhngi 39u newnjfnw if29 hf49u3nf uiwenf 932h f64ugbn</p>
                 </div>
             </article>
 
@@ -190,16 +202,10 @@
         </section>
 
 
-        <!--  -->
-
-        <section>
-
-        </section>
-
     </main>
 
 
-    <section class="container_mobile">
+    <section id="container_mobile_wasp" class="container_mobile">
         <div class="box_up">    
             <span class="camera"></span>
             <span class="circles"></span>
@@ -238,27 +244,31 @@
 
         </div>
         <div class="buttons_down">
-            <span class="btn_home"></span>
+            <span onclick="mobile_out()" id="mobile_out" class="btn_home"></span>
         </div>
+    </section>
+
+    <section id="button_mobile_start" class="mobile_button">
+        <button onclick="mobile()" id="button_movile_wasp"><img src="../../img/movile_icon.png" alt="No se ha podido cargar la imagen"></button>
     </section>
 
 
 
     <!-- Antivirus -->
 
-    <section class="second_mobile_button">
-        <button onclick="button()" id="button_start"><img src="../../img/movile_icon.png" alt="No se ha podido cargar la imagen"></button>
+    <section id="second_mobile_button" class="second_mobile_button">
+        <button onclick="button()" id="button_start"><img src="../../img/test1/skull.png" alt="No se ha podido cargar la imagen"></button>
     </section>
 
 
 
-    <section id="button_mobile" class="second_container_mobile">
+    <section id="button_virus" class="second_container_mobile">
         <div class="box_up">    
             <span class="camera"></span>
             <span class="circles"></span>
             <span class="audio_up"></span>
         </div>
-        <div class="screen_wasp">
+        <div class="second_screen_wasp">
             <section class="second_top_wasp">
 
                 <!-- Nombre del programa -->
@@ -269,21 +279,29 @@
             <section class="second_mid_wasp">
                 <article><h2>Código de virus</h2></article>
                 <article>
-                    <form action="" method="get">
+                    <form action="./validation/validation_test1.php" method="POST">
 
                     
                         <article class="code_form">
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
-                            <input type="text" placeholder="0">
+                            <input type="text" name="code1" placeholder="0">
+                            <input type="text" name="code2" placeholder="0">
+                            <input type="text" name="code3" placeholder="0">
+                            <input type="text" name="code4" placeholder="0">
+                            <input type="text" name="code5" placeholder="0">
+                            <input type="text" name="code6" placeholder="0">
                         </article>
 
                         <input type="submit" class="code_confirm" id="code_confirm" name="code_confirm">
 
                     </form>
+
+                    <p style="color: white;">
+                    <?php if(isset($_GET['error']) && $_GET['error'] == "1"){
+
+                        echo "Código incorrecto.";
+
+                    } ?>
+                    </p>
                 </article>
 
                     
@@ -293,15 +311,82 @@
 
         </div>
         <div class="buttons_down">
-            <span onclick="mobile()" name="2button" id="second_btn_mobile" class="second_btn_home"></span>
+            <span onclick="antivirus()" name="2button" id="second_btn_mobile" class="second_btn_home"></span>
         </div>
     </section>
 
 
-    <!-- Recetas -->
+    <!-- Algoritmos -->
 
     <section id="book" class="book">
-        <button onclick="book()" id="book"><img src="../../img/test1/book_icon.png" alt="No se ha podido cargar la imagen"></button>
+        <button onclick="book()" id="button_book"><img src="../../img/test1/book_icon.png" alt="No se ha podido cargar la imagen"></button>
+    </section>
+
+    <section id="container_book" class="container_book">
+        <article class="inside_book">
+            <img src="../../img/test1/algorithm_book.png" alt="No se ha podido cargar esta imagen">
+            <article class="first_alg">
+                <h2>a--j3d</h2>
+                <p>P: 2 <br> N: ---#</p> <!-- 3 -->
+            </article>
+            <article class="second_alg">
+                <h2>0.a-s12</h2>
+                <p>P: 7 <br> N: ----#</p> <!-- 8 -->
+            </article>
+            <article class="third_alg">
+                <h2>M7.1--N</h2>
+                <p>P: 4 <br> N: --#</p> <!-- 8 -->
+            </article>
+            <article class="fourth_alg">
+                <h2>I..ap-2</h2>
+                <p>P: 9 <br> N: #</p> <!-- 6 -->
+            </article>
+            <article class="fifth_alg">
+                <h2>M9I-a.w</h2>
+                <p>P: 2 <br> N: --#</p> <!-- 9 -->
+            </article>
+            <article class="sixth_alg">
+                <h2>-Nd-.4v</h2>
+                <p>P: 3 <br> N: ----#</p> <!-- 7 -->
+            </article>
+
+
+
+
+            <article class="first_problem">
+                <p><b>a--j3d</b> + <b>-Nd-.4v</b> = --#---</p> <!-- 3 + 7 = 10 -->
+            </article>
+            <article class="second_problem">
+                <p><b>M9I-a.w</b> + <b>M7.1--N</b> = ----#-</p> <!-- 9 + 8 = 17 -->
+            </article>
+            <article class="third_problem">
+                <p><b>I..ap-2</b> + <b>0.a-s12</b> = #-----</p> <!-- 6 + 8 = 14 -->
+            </article>
+            <article class="fourth_problem">
+                <p><b>M9I-a.w</b> + <b>-Nd-.4v</b> = -----#</p> <!-- 9 + 7 = 16 -->
+            </article>
+            <article class="fifth_problem">
+                <p><b>I..ap-2</b> - <b>a--j3d</b> = -#----</p> <!-- 6 - 3 = 3 -->
+            </article>
+            <article class="sixth_problem">
+                <p><b>M7.1--N</b> - <b>-Nd-.4v</b> = ---#--</p> <!-- 9 - 7 = 2 -->
+            </article>
+
+
+            <button onclick="close_book()" id="close_book" class="close_book"><b>Cerrar</b></button>
+        </article>
+
+        <!-- 
+        
+        14
+        3
+        10
+        2
+        17
+        16
+        -->
+
+
     </section>
 
 

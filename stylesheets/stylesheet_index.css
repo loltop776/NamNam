@@ -339,3 +339,14 @@ td {
 .red{background-color: rgb(255, 107, 107);}
 
 .green{background-color: rgb(198, 250, 93);}
+
+
+@media (max-width: 700px) {
+
+    .container_mobile{
+
+        margin-left: 30%;
+
+    }
+
+}

@@ -46,7 +46,7 @@ session_start();
 
                 <article class="message_boss"><p>No es por coger confianza, pero te necesitamos para más problemas. Te recompensaré con un buen sueldo.</p></article>
 
-                <article class="message_boss"><a href="">Ir al siguiente</a></article>
+                <article class="message_boss"><a href="../tests2/index.php">Ir al siguiente</a></article>
 
             </section>
             <hr>

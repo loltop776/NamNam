@@ -1,0 +1,44 @@
+/* Estilo básico para el body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Contenedor de las cámaras */
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%; /* Ajusta este valor para el tamaño deseado */
+    gap: 20px;
+}
+
+/* Estilo para las cámaras */
+.camara {
+    border: 5px solid white; /* Bordes blancos */
+    padding: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Animación al pasar el ratón */
+}
+
+/* Estilo para las imágenes dentro de las cámaras */
+.camara img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordes redondeados en las imágenes */
+}
+
+/* Efecto hover */
+.camara:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el ratón */
+}
+
+/* Estilo cuando se hace clic */
+.camara:active {
+    transform: scale(1);
+}
